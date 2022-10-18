@@ -50,3 +50,41 @@ console.log(itCompanies.join(',') + ' are Big IT Companies');
 
 
 // Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found
+console.log (itCompanies.includes('samsung') ? 'samsung' : 'Company not found');
+console.log (itCompanies.includes('Facebook') ? 'Facebook' : 'Company not found');
+
+
+// alternative
+console.log (itCompanies.indexOf('samsung') ? 'samsung' : 'Company not found');
+console.log (itCompanies.indexOf('Facebook') ? 'Facebook' : 'Company not found');
+
+// Filter out companies which have more than one 'o' without the filter method
+//TODO
+
+
+// Sort the array using sort() method
+console.log(itCompanies.sort())
+
+// Reverse the array using reverse() method
+console.log(itCompanies.reverse())
+
+// Slice out the first 3 companies from the array
+console.log(itCompanies.slice(0,3));
+
+// Slice out the last 3 companies from the array
+console.log(itCompanies.slice(-3));
+
+// Slice out the middle IT company or companies from the array
+console.log(itCompanies.slice(Math.floor(itCompanies.length/2),Math.floor(itCompanies.length/2) +1))
+
+// Remove the first IT company from the array
+console.log(itCompanies.shift());
+
+// Remove the middle IT company or companies from the array
+console.log(itCompanies.splice(Math.floor(itCompanies.length / 2),1));
+
+// Remove the last IT company from the array
+console.log(itCompanies.splice(itCompanies.length - 1 , 1));
+
+// Remove all IT companies
+console.log(itCompanies.splice());
