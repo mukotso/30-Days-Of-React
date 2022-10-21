@@ -59,7 +59,7 @@ console.log (itCompanies.indexOf('samsung') ? 'samsung' : 'Company not found');
 console.log (itCompanies.indexOf('Facebook') ? 'Facebook' : 'Company not found');
 
 // Filter out companies which have more than one 'o' without the filter method
-//TODO
+
 
 
 // Sort the array using sort() method
