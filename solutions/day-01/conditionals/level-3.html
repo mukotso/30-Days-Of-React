@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conditionals: level-1 exercise</title>
+    <script>
+        // Write a program which tells the number of days in a month.
+        //     Enter a month: January
+        // January has 31 days.
+        //
+        //     Enter a month: JANUARY
+        // January has 31 day
+        //
+        // Enter a month: February
+        // February has 28 days.
+        //
+        //     Enter a month: FEbruary
+        // February has 28 days.
+
+
+        // Write a program which tells the number of days in a month, now consider leap year.
+
+        const month = prompt('Enter month').toLowerCase();
+
+        function getDaysInMonth( month) {
+            return new Date(2022, month, 0).getDate();
+        }
+        const months =
+            [
+                'january','february','march',
+                'april','may','june','july',
+                'august','september','october',
+                'november','december'
+            ]
+
+        alert(getDaysInMonth(months.indexOf(month) + 1));
+
+    </script>
+</head>
+</html>
