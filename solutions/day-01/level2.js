@@ -1,9 +1,12 @@
 // Create a separate countries.js file and store the countries array into this file,
 // create a separate file web_techs.js and store the webTechs array into this file.
 // Access both file in main.js file
+// <script src="./"/>
+// <script src="./web_techs.js"/>
 
+// const countriesData=require('./countries.js')
 // require('countries')
-// import {countries} from"./countries"
+import {countries} from"./countries"
 // console.log(webTechs);
 // console.log(countries);
 

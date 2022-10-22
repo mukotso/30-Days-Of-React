@@ -1,4 +1,5 @@
-const countries = [
+export let countries;
+export default  countries = [
     'Albania',
     'Bolivia',
     'Canada',
@@ -11,5 +12,6 @@ const countries = [
     'Japan',
     'Kenya',
 ]
+
 
 
