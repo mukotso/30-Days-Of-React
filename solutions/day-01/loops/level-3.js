@@ -81,7 +81,7 @@ const users = [
 ]
 
 // Create a function called signIn which allows user to sign in to the application
-const userDetails ={
+const userDetails = {
     _id: 'ghderc',
     username: 'Thomas',
     email: 'thomas2334@thomas.com',
@@ -93,17 +93,16 @@ signIn(userDetails)
 
 function signIn(userDetails) {
     let user_exists = users.filter(user => {
-       return  user.email === userDetails.email
+        return user.email === userDetails.email
     });
 
-    if(user_exists.length > 0 ){
+    if (user_exists.length > 0) {
         console.log('user already exists')
-    }else{
+    } else {
         users.push(userDetails)
         console.log('user-logged successfully')
     }
 }
-
 
 
 const products = [
@@ -138,12 +137,34 @@ const products = [
 // The products array has three elements and each of them has six properties.
 // a. Create a function called rateProduct which rates the product
 
-rateProduct(products);
-function rateProduct(products){
-  let ratings =  products.filter(product =>{
-       return   product.ratings
-    })
+console.log('rateProduct which rates the product', rateProduct(products[0]));
 
-    console.log(ratings)
+function rateProduct(product) {
+    let sum_rating = 0;
+    product.ratings.forEach(productRating => {
+        sum_rating += parseInt(productRating.rate)
+    })
+    return sum_rating
 }
+
 // b. Create a function called averageRating which calculate the average rating of a product
+
+
+console.log('averageRating which rates the product', averageRating(products[0]));
+
+function averageRating(product) {
+    let sum_rating = 0;
+    product.ratings.forEach(productRating => {
+        sum_rating += parseInt(productRating.rate)
+    })
+    return sum_rating / product.ratings.length;
+}
+
+// Create a function called likeProduct.
+// This function will helps to like to the product if it is not liked and remove like if it was liked
+
+console.log('likeProduct', likeProduct(products[0]));
+
+function likeProduct(product) {
+    return product.likes.length > 0 ? product.likes = [] : product.likes = ['liked']
+}
